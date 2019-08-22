@@ -1,0 +1,33 @@
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 85%;
+};
+
+body {
+    background: $backgroundColor;
+}
+
+h1 {
+    color: $buttonFont;
+    font-family: $headerFont;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+    font-size: calc(4.4rem + (80 - 44) * ((100vw - 315px) / (1300 - 315)));
+    letter-spacing: 1.5px;
+    text-shadow: -4px 2px $buttonColor;
+    margin: 0 auto;
+    
+}
+
+.message {
+    font-family: $baseFont;
+    color: $baseColor;
+    font-size: calc(1.8rem + (24 - 18) * ((100vw - 315px) / (1300 - 315)));
+    line-height: 1.5;
+}

@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,wCAAwC;AAExC,wCAAwC;AAExC,+BAA+B;AAE/B,gBAAgB;AENhB,AAAA,EAAE,CAAC;EACC,WAAW,EDAF,WAAW,EAAE,UAAU;ECChC,cAAc,EAAE,SAAS;EACzB,cAAc,EAAE,GAAG;EACnB,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "main.scss",
+        "_mediaQueries.scss",
+        "_typography.scss",
+        "_generalStyles.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

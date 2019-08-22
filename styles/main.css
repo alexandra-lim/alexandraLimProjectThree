@@ -1,0 +1,36 @@
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+/*Even smaller*/
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+body {
+  background: #f4f4e8;
+}
+
+h1 {
+  color: #b43e8d;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-style: italic;
+  font-size: calc(4.4rem + (80 - 44) * ((100vw - 315px) / (1300 - 315)));
+  letter-spacing: 1.5px;
+  text-shadow: -4px 2px #f3b8d9;
+  margin: 0 auto;
+}
+
+.message {
+  font-family: "Didact Gothic", sans-serif;
+  color: #6b63dd;
+  font-size: calc(1.8rem + (24 - 18) * ((100vw - 315px) / (1300 - 315)));
+  line-height: 1.5;
+}
