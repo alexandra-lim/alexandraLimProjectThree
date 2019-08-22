@@ -8,7 +8,7 @@ chooseAdventure.init = function(){
 chooseAdventure.start = function(){
     $('.message').html(chooseAdventure.baseStory.message);
     $('.buyToast').prop('value', `${chooseAdventure.baseStory.optionA}`);
-$('.refuseToast').prop('value', `${chooseAdventure.baseStory.optionB}`);
+    $('.refuseToast').prop('value', `${chooseAdventure.baseStory.optionB}`);
 }
 
 chooseAdventure.baseStory = {
