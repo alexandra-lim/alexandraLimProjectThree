@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    color: $buttonFont;
+    color: $buttonTextColor;
     font-family: $headerFont;
     text-transform: uppercase;
     font-size: calc(4.4rem + (80 - 44) * ((100vw - 315px) / (1300 - 315)));
@@ -25,13 +25,19 @@ h1 {
     text-shadow: -4px 2px $buttonColor;    
 }
 
+form p {
+    margin-bottom: 0;
+}
+
 .message {
     background: rgba(244, 244, 232, 0.5);
-    padding: 2%;
+    border-radius: 5px;
+    padding: 4%;
     color: $baseColor;
     font-size: calc(1.8rem + (24 - 18) * ((100vw - 315px) / (1300 - 315)));
     line-height: 1.5;
     text-align: justify;
+    margin-bottom: 5%;
 }
 
 .theEnd {
@@ -39,12 +45,12 @@ h1 {
 }
 
 input[type="submit"] {
-    border: 1px solid $buttonFont;
+    @include border($buttonTextColor);
     background: $buttonColor;
-    color: $buttonFont;
+    color: $buttonTextColor;
     width: 100%;
     padding: 4% 5%;
-    margin: 5% 0;
+    margin: 7% 0 0 0;
     white-space: normal;
     text-align: center;
     font-size: calc(1.6rem + (20 - 16) * ((100vw - 315px) / (1300 - 315)));
@@ -52,17 +58,26 @@ input[type="submit"] {
     text-transform: lowercase;
     font-weight: 700;
     letter-spacing: 1.1px;
-    box-shadow: 5px 5px $buttonFont;
+    box-shadow: 5px 5px $buttonTextColor;
     transition: 0.3s linear;
-    position: relative;
     &:hover {
-        border: 1px solid $baseColor;
+        @include border($baseColor);
         background: $baseColor;
         color: $backgroundColor;
     }
     &:active, &:focus {
-        // top: 5px;
         animation: 0.7s short-press cubic-bezier(0.770, 0.000, 0.175, 1.000) forwards;
+    }
+}
+
+footer {
+    background: rgba(244, 244, 232, 0.5);
+    margin-top: 10%;
+    font-size: calc(1.2rem + (16 - 12) * ((100vw - 315px) / (1300 - 315)));
+    text-align: center;
+    p {
+      color: $baseColor;
+      margin-bottom: 0;
     }
 }
 

@@ -230,13 +230,19 @@ h1 {
   text-shadow: -4px 2px #f3b8d9;
 }
 
+form p {
+  margin-bottom: 0;
+}
+
 .message {
   background: rgba(244, 244, 232, 0.5);
-  padding: 2%;
+  border-radius: 5px;
+  padding: 4%;
   color: #6b63dd;
   font-size: calc(1.8rem + (24 - 18) * ((100vw - 315px) / (1300 - 315)));
   line-height: 1.5;
   text-align: justify;
+  margin-bottom: 5%;
 }
 
 .theEnd {
@@ -244,12 +250,12 @@ h1 {
 }
 
 input[type="submit"] {
-  border: 1px solid #b43e8d;
+  border: 1.5px solid #b43e8d;
   background: #f3b8d9;
   color: #b43e8d;
   width: 100%;
   padding: 4% 5%;
-  margin: 5% 0;
+  margin: 7% 0 0 0;
   white-space: normal;
   text-align: center;
   font-size: calc(1.6rem + (20 - 16) * ((100vw - 315px) / (1300 - 315)));
@@ -261,11 +267,10 @@ input[type="submit"] {
           box-shadow: 5px 5px #b43e8d;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
-  position: relative;
 }
 
 input[type="submit"]:hover {
-  border: 1px solid #6b63dd;
+  border: 1.5px solid #6b63dd;
   background: #6b63dd;
   color: #f4f4e8;
 }
@@ -273,4 +278,16 @@ input[type="submit"]:hover {
 input[type="submit"]:active, input[type="submit"]:focus {
   -webkit-animation: 0.7s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
           animation: 0.7s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+footer {
+  background: rgba(244, 244, 232, 0.5);
+  margin-top: 10%;
+  font-size: calc(1.2rem + (16 - 12) * ((100vw - 315px) / (1300 - 315)));
+  text-align: center;
+}
+
+footer p {
+  color: #6b63dd;
+  margin-bottom: 0;
 }

@@ -1,13 +1,42 @@
+// media queries
+
+/* Portrait tablet and small desktops */
+@mixin mq-tablet-desk {
+    @media (max-width: 940px){
+        @content;
+    }
+}
+
+
+/* Landscape phone to portrait tablet */
+@mixin mq-landscape-tablet {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+/* Landscape phones and down */
+@mixin mq-landscape-mobile {
+    @media (min-width: 480px){
+        @content;
+    }
+
+
+// button animation
 @keyframes short-press {
   0% {
     transform: scale(1);
   }
-  
   50% {
     transform: scale(.9);
   }
-  
   100% {
     transform: scale(1);
   }
+}
+
+
+// border
+@mixin border ($color) {
+    border: 1.5px solid $color;
 }
