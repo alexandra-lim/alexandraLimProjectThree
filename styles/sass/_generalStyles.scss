@@ -10,24 +10,49 @@ html {
 
 body {
     background: $backgroundColor;
+    font-family: $baseFont;
 }
 
 h1 {
     color: $buttonFont;
     font-family: $headerFont;
     text-transform: uppercase;
-    font-weight: 800;
-    font-style: italic;
     font-size: calc(4.4rem + (80 - 44) * ((100vw - 315px) / (1300 - 315)));
     letter-spacing: 1.5px;
+    line-height: 1.2;
+    font-style: italic;
+    font-weight: 800;
     text-shadow: -4px 2px $buttonColor;
-    margin: 0 auto;
+    // margin: 0 auto;
     
 }
 
 .message {
-    font-family: $baseFont;
     color: $baseColor;
     font-size: calc(1.8rem + (24 - 18) * ((100vw - 315px) / (1300 - 315)));
     line-height: 1.5;
+    text-align: justify;
 }
+
+input[type="submit"] {
+    border: none;
+    background: $buttonColor;
+    color: $buttonFont;
+    width: 100%;
+    padding: 4% 5%;
+    margin: 5% 0;
+    white-space: normal;
+    text-align: center;
+    font-size: calc(1.6rem + (20 - 16) * ((100vw - 315px) / (1300 - 315)));
+    font-family: $headerFont;
+    text-transform: lowercase;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    box-shadow: 5px 5px $buttonFont;
+    transition: 0.3s linear;
+    &:hover {
+        background: $baseColor;
+        color: $backgroundColor;
+    }
+}
+

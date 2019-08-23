@@ -6,7 +6,7 @@ chooseAdventure.init = function(){
 };
 
 chooseAdventure.baseStory = {
-    message: 'You\'re at brodflour for brunch and your bff decides to order a $14 avocado and egg sourdough bun and a cortado. You were only planning on having a drip coffee and a slice of toast and jam, but you\'re starving. What do you do?',
+    message: 'You\'re at brodflour, the city\'s newest bread bakery, for brunch and your bff decides to order a $14 avocado and egg sourdough bun and a cortado. You were only planning on having a drip coffee and a slice of toast and jam, but you\'re starving. What do you do?',
     optionA: 'Buy the avocado toast, YOLO',
     optionB: 'Avoid temptation and eat your plain toast'
 };
