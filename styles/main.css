@@ -36,6 +36,36 @@ h1 {
   text-align: justify;
 }
 
+@-webkit-keyframes short-press {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes short-press {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 input[type="submit"] {
   border: none;
   background: #f3b8d9;
@@ -54,9 +84,15 @@ input[type="submit"] {
           box-shadow: 5px 5px #b43e8d;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+  position: relative;
 }
 
 input[type="submit"]:hover {
   background: #6b63dd;
   color: #f4f4e8;
+}
+
+input[type="submit"]:active, input[type="submit"]:focus {
+  -webkit-animation: 0.8s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: 0.8s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }

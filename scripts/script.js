@@ -2,7 +2,8 @@ const chooseAdventure = {};
 
 chooseAdventure.init = function(){
     chooseAdventure.start();
-    chooseAdventure.buttonSubmit();
+    chooseAdventure.button1Click();
+    chooseAdventure.button2Click();
 };
 
 chooseAdventure.baseStory = {
@@ -18,7 +19,7 @@ chooseAdventure.avoToast = {
         displayMessage: function(){
             const avoToastMsg = `${chooseAdventure.avoToast.buyToast.message} 
             <p>${chooseAdventure.avoToast.buyToast.nextQuestion}</p>`;
-            $('.message').html(avoToastMsg);
+            $('.message').hide().html(avoToastMsg).fadeIn('slow');
         },
         optionA: 'Become an influencer and a social media manager',
         optionB: 'Learn how to code'
@@ -29,7 +30,7 @@ chooseAdventure.avoToast = {
         displayMessage: function(){
             const noToastMsg = `${chooseAdventure.avoToast.refuseToast.message} 
             <p>${chooseAdventure.avoToast.refuseToast.nextQuestion}</p>`;
-            $('.message').html(noToastMsg);
+            $('.message').hide().html(noToastMsg).fadeIn('slow');
         },
         optionA: 'Go get groceries',
         optionB: 'Order tacos on UberEats'
@@ -114,7 +115,7 @@ chooseAdventure.newHome = {
         }
     },
     moveHome: {
-        message: 'You decide to move home for the timebeing. Your parents live in the city, and the 45 minute commute each way isn\'t too bad. Plus you hardly visited your parents when you lived alone and you feel bad about it. But you never move out again. The food\'s too good. You also put all your eggs in one basket and lose all of your savings by investing in Bitcoin.',
+        message: 'You decide to move home for the time being. Your parents live in the city, and the 45 minute commute each way isn\'t too bad. Plus you hardly visited your parents when you lived alone and you feel bad about it. But you never move out again. The food\'s too good. You also put all your eggs in one basket and lose all of your savings by investing in Bitcoin.',
         theEnd: 'The End.',
         displayMessage: function(){
             const moveHomeMsg = `${chooseAdventure.newHome.moveHome.message}
@@ -125,7 +126,7 @@ chooseAdventure.newHome = {
 }; 
 
 // if you buy the avo toast path
-chooseAdventure.buttonSubmit = function(){
+chooseAdventure.button1Click = function(){
     $('.buyToast').on('click', function(e){
         e.preventDefault();
         chooseAdventure.avoToast.buyToast.displayMessage();
@@ -165,15 +166,17 @@ chooseAdventure.buttonSubmit = function(){
             chooseAdventure.hideButtons();
         })
     });
+};
 
     // if you don't buy avo toast path
+chooseAdventure.button2Click = function() {
     $('.refuseToast').on('click', function(e){
         e.preventDefault();
         chooseAdventure.avoToast.refuseToast.displayMessage();
         $('#optionA').prop('value', `${chooseAdventure.avoToast.refuseToast.optionA}`);
         $('#optionA').toggleClass('groceries');
-        $('#optionB').prop('value', `${chooseAdventure.avoToast.refuseToast.optionB}`);
-        $('#optionB').toggleClass('uberEats');
+        $(this).prop('value', `${chooseAdventure.avoToast.refuseToast.optionB}`);
+        $(this).toggleClass('uberEats');
 
         // if you choose to order UberEats
         $('.uberEats').on('click', function (e) {
@@ -181,8 +184,8 @@ chooseAdventure.buttonSubmit = function(){
             chooseAdventure.badBeef.uberEats.displayMessage();
             $('#optionA').prop('value', `${chooseAdventure.badBeef.uberEats.optionA}`);
             $('#optionA').toggleClass('roommate')
-            $('#optionB').prop('value', `${chooseAdventure.badBeef.uberEats.optionB}`);
-            $('#optionB').toggleClass('moveHome');
+            $(this).prop('value', `${chooseAdventure.badBeef.uberEats.optionB}`);
+            $(this).toggleClass('moveHome');
 
             // find a roommate
             $('.roommate').on('click', function(e){
