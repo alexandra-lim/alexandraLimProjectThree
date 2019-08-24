@@ -28,8 +28,8 @@ chooseAdventureApp.avoToast = {
         optionB: 'Learn how to code'
     },
     refuseToast: {
-        message: 'You are so hungry, but that avocado toast would have been a huge chunk of your monthly budget! You head home, looking forward to your taco dinner. But when you open your fridge door, you discover that the ground beef in your fridge has gone bad and dinner is now ruined.',
-        nextQuestion: 'With the main ingredient of your taco dinner now in the compost bin, do you head back out to get groceries, or do you just order tacos on UberEats?',
+        message: 'You are so hungry, but that avocado toast would have been a huge chunk of your monthly budget! You head home, looking forward to your taco dinner. But just as when you\'re about to make dinner, you discover that the ground beef in your fridge has gone bad and dinner is now ruined.',
+        nextQuestion: 'With your homemade taco idea now in the compost bin, do you head back out to get groceries, or do you just order tacos on UberEats?',
         displayMessage: function(){
             const noToastMsg = `
                 ${chooseAdventureApp.avoToast.refuseToast.message} 
@@ -46,7 +46,7 @@ chooseAdventureApp.avoToast = {
 chooseAdventureApp.newJob = {
     newbieInfluencer: {
         message: 'You decide to become an influencer (and also a social media manager to pay the bills). Your avocado toast picture has blown up Instagram and you start receiving messages from restaurants and cafes asking you to promote them.',
-        nextQuestion: 'You gain local fame promoting these restaurants, only choosing to work with independent locavore businesses. But then McDonald\'s comes knocking and they\'re offering you a large amount of money to promote them. Do you choose to work with McDonald\'s?',
+        nextQuestion: 'You gain local fame promoting these restaurants, only choosing to work with independent locavore businesses. But then McDonald\'s comes knocking and they\'re offering you a fortune to promote them. Do you choose to work with McDonald\'s?',
         displayMessage: function(){
             const influencerMsg = `
                 ${chooseAdventureApp.newJob.newbieInfluencer.message}
@@ -59,7 +59,7 @@ chooseAdventureApp.newJob = {
         optionB: 'Decline McDonald\'s offer' 
     },
     webDev: {
-        message: 'You\'ve always been somewhat interested in coding. You try a few courses on Codecademy, breezing through them. Someone mentions HackerYou at a party, and the next day, you call them. You decide to enroll in the part-time Web Development course and you love it! You decide that being a front-end web developer is for you, and successfully apply for their bootcamp program. Nine weeks of bootcamp and two months of job searching later, you land your first web development role at a well-known digital agency. You are now a junior front-end web developer and bring your new corgi puppy to work every day.',
+        message: 'You\'ve always been somewhat interested in coding. You try a few courses on Codecademy, but you want more. Someone mentions HackerYou at a party, and the next day, you call them. You decide to enroll in the part-time Web Development course and you love it! You decide that being a front-end web developer is for you, and successfully apply for their bootcamp program. Nine weeks of bootcamp and two months of job searching later, you land your first web development role at a well-known digital agency. You are now a junior front-end web developer who brings their new corgi puppy to work every day.',
         theEnd: 'The End.',
         displayMessage: function(){
             const webDevMsg = `
@@ -101,7 +101,7 @@ chooseAdventureApp.sellYourSoul = {
 
 chooseAdventureApp.badBeef = {
     groceries: {
-        message: 'Well, you are one responsible Millennial. You take the money you\'ve saved from avocado toast, somehow manage to avoid the temptation of UberEats, and make your way to the grocery store. You get the ground beef you need for tacos, make your tacos when you get home, and settle down for an evening of Netflix. Your journey ends here with a Stranger Things marathon with your cat Mittens purring on your lap.',
+        message: 'Well, you are one responsible Millennial. You take the money you\'ve saved from avocado toast, somehow manage to avoid the temptation of UberEats, and make your way to the grocery store. You get the ground beef you need for tacos, make your tacos when you get home, and settle down for an evening of Netflix. Your journey ends here with a Stranger Things marathon and your cat Mittens purring on your lap.',
         theEnd: 'The End.',
         displayMessage: function(){
             const groceriesMsg = `
