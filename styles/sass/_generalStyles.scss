@@ -43,6 +43,8 @@ form p {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $purple;
 }
 
 input[type="submit"] {
@@ -59,7 +61,7 @@ input[type="submit"] {
     text-transform: lowercase;
     font-weight: 700;
     letter-spacing: 1.1px;
-    box-shadow: 5px 5px $purple;
+    box-shadow: 7px 7px $purple;
     transition: 0.3s linear;
     &:hover, &:focus {
         @include border($blue);
@@ -67,7 +69,10 @@ input[type="submit"] {
         color: $cream;
     }
     &:active {
-        animation: 0.7s short-press cubic-bezier(0.770, 0.000, 0.175, 1.000) forwards;
+        // animation: 0.7s short-press cubic-bezier(0.770, 0.000, 0.175, 1.000) forwards;
+        background-color: $blue;
+        box-shadow: 4px 4px $purple;
+        transform: translateY(3px);
     }
 }
 

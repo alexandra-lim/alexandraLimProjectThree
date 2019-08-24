@@ -251,6 +251,8 @@ form p {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #b43e8d;
 }
 
 input[type="submit"] {
@@ -267,8 +269,8 @@ input[type="submit"] {
   text-transform: lowercase;
   font-weight: 700;
   letter-spacing: 1.1px;
-  -webkit-box-shadow: 5px 5px #b43e8d;
-          box-shadow: 5px 5px #b43e8d;
+  -webkit-box-shadow: 7px 7px #b43e8d;
+          box-shadow: 7px 7px #b43e8d;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
 }
@@ -280,8 +282,11 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 }
 
 input[type="submit"]:active {
-  -webkit-animation: 0.7s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
-          animation: 0.7s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  background-color: #6b63dd;
+  -webkit-box-shadow: 4px 4px #b43e8d;
+          box-shadow: 4px 4px #b43e8d;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 footer {
