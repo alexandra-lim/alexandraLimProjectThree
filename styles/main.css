@@ -292,6 +292,7 @@ input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:fo
 }
 
 input[type="submit"]:active {
+  background: #f3b8d9;
   -webkit-box-shadow: 4px 4px #ec8d17;
           box-shadow: 4px 4px #ec8d17;
   -webkit-transform: translateY(3px);
