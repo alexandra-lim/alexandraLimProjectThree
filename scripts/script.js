@@ -28,7 +28,7 @@ chooseAdventureApp.avoToast = {
         optionB: 'Learn how to code'
     },
     refuseToast: {
-        message: 'You are so hungry, but that avocado toast would have been a huge chunk of your monthly budget! You head home, looking forward to your taco dinner. But just as when you\'re about to make dinner, you discover that the ground beef in your fridge has gone bad and dinner is now ruined.',
+        message: 'You are so hungry, but that avocado toast would have been a huge chunk of your monthly budget! You head home, looking forward to your taco dinner. But just as you\'re about to make dinner, you discover that the ground beef in your fridge has gone bad and dinner is now ruined.',
         nextQuestion: 'With your homemade taco idea now in the compost bin, do you head back out to get groceries, or do you just order tacos on UberEats?',
         displayMessage: function(){
             const noToastMsg = `
@@ -60,14 +60,11 @@ chooseAdventureApp.newJob = {
     },
     webDev: {
         message: 'You\'ve always been somewhat interested in coding. You try a few courses on Codecademy, but you want more. Someone mentions HackerYou at a party, and the next day, you call them. You decide to enroll in the part-time Web Development course and you love it! You decide that being a front-end web developer is for you, and successfully apply for their bootcamp program. Nine weeks of bootcamp and two months of job searching later, you land your first web development role at a well-known digital agency. You are now a junior front-end web developer who brings their new corgi puppy to work every day.',
-        theEnd: 'The End.',
         displayMessage: function(){
-            const webDevMsg = `
-                ${chooseAdventureApp.newJob.webDev.message}
-                <p class="theEnd">
-                    ${chooseAdventureApp.newJob.webDev.theEnd}
-                </p>`;
+            const webDevMsg = `${chooseAdventureApp.newJob.webDev.message}`;
+            const refreshButton = `<input type="submit" class="refresh animated infinite pulse" value="Play again">`;
             $('.message').html(webDevMsg);
+            $('form').append(refreshButton);
         }
     }
 };
@@ -75,25 +72,17 @@ chooseAdventureApp.newJob = {
 chooseAdventureApp.sellYourSoul = {
     majorInfluencer: {
         message: 'You sell your soul to a corporation, but it pays off. After a row of successful campaigns with McDonald\'s, then Hershey\'s, you get a call from Kendall Jenner\'s brand manager. She wants you to help promote Kendall and Kylie\'s new designer avocado line. You\'ve made it to the big leagues. You quit your social media manager job and start flying to exotic locales to promote the next big thing.',
-        theEnd: 'The End.',
         displayMessage: function(){
-            const majorInfluencerMsg = `
-                ${chooseAdventureApp.sellYourSoul.majorInfluencer.message}
-                <p class="theEnd">
-                    ${chooseAdventureApp.sellYourSoul.majorInfluencer.theEnd}
-                </p>`;
+            const majorInfluencerMsg = `${chooseAdventureApp.sellYourSoul.majorInfluencer.message}`;
+            const refreshButton = `<input type="submit" class="refresh animated infinite pulse" value="Play again">`;
             $('.message').html(majorInfluencerMsg);
+            $('form').append(refreshButton);
         }
     },
     barista: {
-        message: 'You refuse to work with McDonald\'s. Sadly, as time passes, your influencer career never truly takes off and you get a third job as a barista. Your days now consist of making cappuccinos for unappreciative guests at 7 am and taking mid-afternoon naps so you have enough energy to go out for dinner to promote the city\'s hottest restaurants.',
-        theEnd: 'The End.',
+        message: 'You refuse to work with McDonald\'s. Sadly, as time passes, your influencer career never truly takes off and you get a third job as a barista. Your days now consist of making cappuccinos for suits at 7 am and taking mid-afternoon naps so you have enough energy to go out for dinner to promote the city\'s hottest restaurants.',
         displayMessage: function(){
-            const baristaMsg = `
-                ${chooseAdventureApp.sellYourSoul.barista.message}
-                <p class="theEnd">
-                    ${chooseAdventureApp.sellYourSoul.barista.theEnd}
-                </p>`;
+            const baristaMsg = `${chooseAdventureApp.sellYourSoul.barista.message}</p>`;
             $('.message').html(baristaMsg);
         }
     }
@@ -101,15 +90,12 @@ chooseAdventureApp.sellYourSoul = {
 
 chooseAdventureApp.badBeef = {
     groceries: {
-        message: 'Well, you are one responsible Millennial. You take the money you\'ve saved from avocado toast, somehow manage to avoid the temptation of UberEats, and make your way to the grocery store. You get the ground beef you need for tacos, make your tacos when you get home, and settle down for an evening of Netflix. Your journey ends here with a Stranger Things marathon and your cat Mittens purring on your lap.',
-        theEnd: 'The End.',
+        message: 'Well, you are one responsible millennial. You take the money you\'ve saved from avocado toast, somehow manage to avoid the temptation of UberEats, and make your way to the grocery store. You get the ground beef you need for tacos, make your tacos when you get home, and settle down for an evening of Netflix. Your journey ends here with a Stranger Things marathon and your cat Mittens purring on your lap.',
         displayMessage: function(){
-            const groceriesMsg = `
-                ${chooseAdventureApp.badBeef.groceries.message}
-                <p class="theEnd">
-                    ${chooseAdventureApp.badBeef.groceries.theEnd}
-                </p>`;
+            const groceriesMsg = `${chooseAdventureApp.badBeef.groceries.message}`;
+            const refreshButton = `<input type="submit" class="refresh animated infinite pulse" value="Play again">`;
             $('.message').html(groceriesMsg);
+            $('form').append(refreshButton);
         }
     },
     uberEats: {
@@ -131,26 +117,19 @@ chooseAdventureApp.badBeef = {
 chooseAdventureApp.newHome = {
     roommate: {
         message: 'You decide to look for a roommate. You give up your one bedroom downtown condo and move in with your co-worker in the west end. Life is great, but it\'s not the same as living on your own. But rent is affordable. As time passes, your dream of living on your own again fades away, the average one bedroom rental and purchase both skyrocketing to record highs. After ten years, you finally have enough savings to buy a tiny house. You Konmari your possessions and start anew in the suburbs of suburbs. Commuter life begins.',
-        theEnd: 'The End.',
         displayMessage: function(){
-            const roommateMsg = `
-                ${chooseAdventureApp.newHome.roommate.message}
-                <p class="theEnd">
-                    ${chooseAdventureApp.newHome.roommate.theEnd}
-                </p>`;
+            const roommateMsg = `${chooseAdventureApp.newHome.roommate.message}`;
             $('.message').html(roommateMsg);
+            $('form').append(refreshButton);
         }
     },
     moveHome: {
-        message: 'You decide to move home for the time being. Your parents live in the city, and the 45 minute commute each way isn\'t too bad. Plus you hardly visited your parents when you lived alone and you feel bad about it. But you never move out again. The food\'s too good. You also put all your eggs in one basket and lose all of your savings by investing in Bitcoin.',
-        theEnd: 'The End.',
+        message: 'You decide to move home and live in your parents\' basement for the time being. They live in the city, and the 45 minute commute each way isn\'t too bad. But you never move out again. The food\'s too good. You also put all of your eggs in one basket and lose 95% of your savings by investing in Bitcoin.',
         displayMessage: function(){
-            const moveHomeMsg = `
-                ${chooseAdventureApp.newHome.moveHome.message}
-                <p class="theEnd">
-                    ${chooseAdventureApp.newHome.moveHome.theEnd}
-                </p>`;
+            const moveHomeMsg = `${chooseAdventureApp.newHome.moveHome.message}`;
+            const refreshButton = `<input type="submit" class="refresh animated infinite pulse" value="Play again">`;
             $('.message').html(moveHomeMsg);
+            $('form').append(refreshButton);
         }
     }
 }; 

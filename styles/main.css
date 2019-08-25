@@ -213,6 +213,7 @@ h1 {
   font-style: italic;
   font-weight: 800;
   text-shadow: -4px 2px #3263b5;
+  margin-bottom: 0;
 }
 
 @media (min-width: 480px) {
@@ -243,20 +244,11 @@ form p {
   font-size: calc(2rem + (30 - 20) * ((100vw - 315px) / (1300 - 315)));
   line-height: 1.5;
   text-align: justify;
-  margin-bottom: 5%;
-}
-
-.theEnd {
-  text-align: center;
-  font-weight: 700;
-  font-style: italic;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #3263b5;
+  margin-bottom: 0;
 }
 
 input[type="submit"] {
-  border: 1.5px solid #3263b5;
+  border: none;
   background: #3263b5;
   color: #FFffff;
   width: 100%;
@@ -284,6 +276,7 @@ input[type="submit"] {
 @media (min-width: 768px) {
   input[type="submit"] {
     margin-top: 4%;
+    padding: 2% 4%;
   }
 }
 
@@ -293,18 +286,22 @@ input[type="submit"] {
   }
 }
 
-input[type="submit"]:hover, input[type="submit"]:focus {
-  border: 1.5px solid #f3b8d9;
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
   background: #f3b8d9;
   color: #3263b5;
 }
 
 input[type="submit"]:active {
-  background-color: #3263b5;
   -webkit-box-shadow: 4px 4px #ec8d17;
           box-shadow: 4px 4px #ec8d17;
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
+}
+
+.refresh {
+  width: 50%;
+  -webkit-animation-delay: 18s;
+          animation-delay: 18s;
 }
 
 @media (min-width: 940px) {
@@ -322,4 +319,5 @@ footer {
 footer p {
   color: #3263b5;
   margin: 0;
+  padding-bottom: 1%;
 }

@@ -30,7 +30,8 @@ h1 {
     line-height: 1.2;
     font-style: italic;
     font-weight: 800;
-    text-shadow: -4px 2px $blue;    
+    text-shadow: -4px 2px $blue;
+    margin-bottom: 0;
 }
 
 form {
@@ -54,20 +55,11 @@ form {
     font-size: calc(2rem + (30 - 20) * ((100vw - 315px) / (1300 - 315)));
     line-height: 1.5;
     text-align: justify;
-    margin-bottom: 5%;
-}
-
-.theEnd {
-    text-align: center;
-    font-weight: 700;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: $blue;
+    margin-bottom: 0;
 }
 
 input[type="submit"] {
-    @include border($blue);
+    border: none;
     background: $blue;
     color: $white;
     width: 100%;
@@ -89,22 +81,29 @@ input[type="submit"] {
 
     @include mq-landscape-tablet {
         margin-top: 4%;
+        padding: 2% 4%;
     }
 
     @include mq-tablet-desk {
         width: calc(50% - 5%);
     }
 
-    &:hover, &:focus {
-        @include border($pink);
+    &:hover, &:active, &:focus {
         background: $pink;
         color: $blue;
     }
+}
+
+input[type="submit"] {
     &:active {
-        background-color: $blue;
         box-shadow: 4px 4px $orange;
         transform: translateY(3px);
     }
+}
+
+.refresh {
+    width: 50%;
+    animation-delay: 18s;
 }
 
 .refuseToast {
@@ -120,6 +119,7 @@ footer {
     p {
         color: $blue;
         margin: 0;
+        padding-bottom: 1%;
     }
 }
 
