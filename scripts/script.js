@@ -14,7 +14,7 @@ chooseAdventureApp.baseStory = {
 
 chooseAdventureApp.avoToast = {
     buyToast: {
-        message: 'You buy the avocado toast and it is the best decision you\'ve ever made. But the camera eats first and you snap a photo for Instagram. You are living for that avocado toast.',
+        message: 'You order the avocado toast and it is the best decision you\'ve ever made. But the camera eats first and you snap a photo for Instagram. You are living for that avocado toast.',
         nextQuestion: 'The next day at work, your boss tells you that the company is downsizing. And you are being let go. You\'re ineligible for severance pay and you only have enough savings for one month\'s worth of living expenses. This is your chance to do something different. What do you do next?',
         displayMessage: function(){
             const avoToastMsg = `

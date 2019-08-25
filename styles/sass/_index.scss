@@ -12,8 +12,17 @@ body {
     font-family: $baseFont;
 }
 
+a {
+    text-decoration: none;
+    color: $orange;
+    transition: 0.3s linear;
+    &:hover, &:active, &:focus {
+        font-style: italic;
+    }
+}
+
 h1 {
-    color: $purple;
+    color: $orange;
     font-family: $headerFont;
     text-transform: uppercase;
     font-size: calc(4.4rem + (80 - 44) * ((100vw - 315px) / (1300 - 315)));
@@ -21,15 +30,24 @@ h1 {
     line-height: 1.2;
     font-style: italic;
     font-weight: 800;
-    text-shadow: -4px 2px $pink;    
+    text-shadow: -4px 2px $blue;    
 }
 
-form p {
-    margin-bottom: 0;
+form {
+    @include mq-landscape-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    p {
+        margin-bottom: 0;
+        width: 100%;
+    }
 }
 
 .message {
-    background: rgba(244, 244, 232, 0.6);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     padding: 4%;
     color: $blue;
@@ -42,18 +60,19 @@ form p {
 .theEnd {
     text-align: center;
     font-weight: 700;
+    font-style: italic;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: $purple;
+    color: $blue;
 }
 
 input[type="submit"] {
-    @include border($purple);
-    background: $pink;
-    color: $purple;
+    @include border($blue);
+    background: $blue;
+    color: $white;
     width: 100%;
     padding: 4% 5%;
-    margin: 7% 0 0 0;
+    margin-top: 7%;
     white-space: normal;
     text-align: center;
     font-size: calc(1.7rem + (24 - 17) * ((100vw - 315px) / (1300 - 315)));
@@ -61,18 +80,36 @@ input[type="submit"] {
     text-transform: lowercase;
     font-weight: 700;
     letter-spacing: 1.1px;
-    box-shadow: 7px 7px $purple;
+    box-shadow: 7px 7px $orange;
     transition: 0.3s linear;
+
+    @include mq-landscape-mobile {
+        width: 75%;
+    }
+
+    @include mq-landscape-tablet {
+        margin-top: 4%;
+    }
+
+    @include mq-tablet-desk {
+        width: calc(50% - 5%);
+    }
+
     &:hover, &:focus {
-        @include border($blue);
-        background: $blue;
-        color: $cream;
+        @include border($pink);
+        background: $pink;
+        color: $blue;
     }
     &:active {
-        // animation: 0.7s short-press cubic-bezier(0.770, 0.000, 0.175, 1.000) forwards;
         background-color: $blue;
-        box-shadow: 4px 4px $purple;
+        box-shadow: 4px 4px $orange;
         transform: translateY(3px);
+    }
+}
+
+.refuseToast {
+    @include mq-tablet-desk {
+        margin-left: 5%;
     }
 }
 
