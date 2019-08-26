@@ -320,5 +320,8 @@ footer {
 footer p {
   color: #3263b5;
   margin: 0;
+}
+
+footer .credit {
   padding-bottom: 1%;
 }
